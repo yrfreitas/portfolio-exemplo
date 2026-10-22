@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio — Desenvolvedor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <nav class="nav container">
+    <span class="marca">&lt;dev/&gt;</span>
+    <ul class="nav-links">
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button id="alternar-tema" class="btn-tema" aria-label="Alternar tema claro/escuro">🌙</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container">
+    <span class="eyebrow">Disponível para novos projetos</span>
+    <h1>Desenvolvedor focado em sistemas que resolvem problema de verdade.</h1>
+    <p>Construo aplicações web do zero — desde o banco de dados até a
+      interface — com foco em código simples e manutenção fácil.</p>
+    <div class="hero-acoes">
+      <a href="#projetos" class="btn btn-primario">Ver projetos</a>
+      <a href="#contato" class="btn btn-fantasma">Falar comigo</a>
+    </div>
+  </section>
+
+  <section id="projetos" class="projetos">
+    <div class="container">
+      <h2>Projetos</h2>
+      <div class="projetos-grade">
+        <article class="projeto-card">
+          <div class="projeto-tag">Sistema web</div>
+          <h3>Gestão de atendimentos</h3>
+          <p>Plataforma própria pra roteirização de técnicos em campo,
+            controle de estoque e emissão de ordem de serviço — back-end em
+            Python/Flask, front-end em JavaScript puro.</p>
+          <div class="projeto-stack">
+            <span>Python</span><span>Flask</span><span>PostgreSQL</span><span>JavaScript</span>
+          </div>
+        </article>
+        <article class="projeto-card">
+          <div class="projeto-tag">Automação</div>
+          <h3>Robô de consulta de preços</h3>
+          <p>Automação que consulta preço de peça direto num portal B2B e
+            devolve o resultado pro sistema principal, sem intervenção
+            manual.</p>
+          <div class="projeto-stack">
+            <span>Python</span><span>Playwright</span><span>Filas</span>
+          </div>
+        </article>
+        <article class="projeto-card">
+          <div class="projeto-tag">Front-end</div>
+          <h3>Aplicações interativas</h3>
+          <p>Interfaces com validação de formulário, persistência local e
+            componentes animados, sem depender de framework pesado.</p>
+          <div class="projeto-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="habilidades">
+    <div class="container">
+      <h2>Habilidades</h2>
+      <div class="habilidades-grade">
+        <div class="habilidade"><span class="habilidade-nome">Python</span><div class="barra"><div class="preenchimento" style="--nivel: 88%"></div></div></div>
+        <div class="habilidade"><span class="habilidade-nome">JavaScript</span><div class="barra"><div class="preenchimento" style="--nivel: 80%"></div></div></div>
+        <div class="habilidade"><span class="habilidade-nome">Banco de dados</span><div class="barra"><div class="preenchimento" style="--nivel: 75%"></div></div></div>
+        <div class="habilidade"><span class="habilidade-nome">HTML / CSS</span><div class="barra"><div class="preenchimento" style="--nivel: 85%"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="container contato-grid">
+      <div>
+        <h2>Vamos conversar</h2>
+        <p>Preencha o formulário ou mande uma mensagem direta.</p>
+      </div>
+      <form id="form-contato" class="form-contato" novalidate>
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required minlength="2">
+          <span class="erro" data-erro-de="nome"></span>
+        </div>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+          <span class="erro" data-erro-de="email"></span>
+        </div>
+        <div class="campo">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required minlength="10"></textarea>
+          <span class="erro" data-erro-de="mensagem"></span>
+        </div>
+        <button type="submit" class="btn btn-primario btn-form">Enviar mensagem</button>
+        <p id="confirmacao-envio" class="confirmacao" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container"><p>Portfólio de exemplo — projeto acadêmico.</p></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
